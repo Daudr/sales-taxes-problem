@@ -6,7 +6,7 @@
         "request": "launch",
         "name": "Launch Program",
         "program": "${workspaceFolder}/dist/index.js",
-        "args": ["input/input2.txt"]
+        "args": ["input/input1.txt"]
       },
       {
         "type": "node",

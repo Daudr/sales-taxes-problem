@@ -2,6 +2,7 @@ import fs from "fs";
 import readline from "readline";
 import { ShoppingCart } from "../models/shopping-cart";
 import { ItemParser } from "./item-parser";
+import { Util } from "./utils";
 
 /** Function that returns a readline.Interface with the input file that needs to be read */
 const lineReader = (input: string) =>
@@ -18,7 +19,12 @@ export const getFromFile = async (input: string) => {
 
     // On every line of the file there should be an item that we parse with an ItemParser
     await reader.on("line", (line: string) => {
-      sc.put(ItemParser.parser(line), ItemParser.count(line));
+      if (ItemParser.matches(line)) {
+        sc.put(ItemParser.parser(line), ItemParser.count(line));
+      } else {
+        console.error('Wrong input');
+        console.error(`${line}\n\n`);
+      }
     });
 
     // When there isn't more lines in the opened file we call the printing functions of the shopping cart

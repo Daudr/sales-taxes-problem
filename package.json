@@ -6,7 +6,7 @@
   "scripts": {
     "tsc": "tsc",
     "test": "mocha -- --require ts-node/register test/**/*.ts",
-    "start": "tsc && node dist/index.js input/input1.txt input/input2.txt input/input3.txt"
+    "start": "npm run tsc && node dist/src/index.js input/input1.txt input/input2.txt input/input3.txt"
   },
   "author": "Michele Da Rin Fioretto",
   "license": "MIT",
