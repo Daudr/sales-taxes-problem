@@ -1,14 +1,16 @@
 {
   "name": "sales-tax-problem",
   "version": "1.0.0",
-  "description": "",
+  "description": "A solution to the sales taxes problem written in typescript",
   "main": "index.js",
   "scripts": {
     "tsc": "tsc",
-    "test": "mocha -- --require ts-node/register test/**/*.ts"
+    "test": "mocha -- --require ts-node/register test/**/*.ts",
+    "start": "tsc && node dist/index.js input/input1.txt input/input2.txt input/input3.txt"
   },
   "author": "Michele Da Rin Fioretto",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": "https://github.com/Daudr/sales-tax-problem",
   "dependencies": {
     "@types/node": "^11.11.6",
     "typescript": "^3.3.4000"
