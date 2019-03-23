@@ -3,9 +3,9 @@ import { Item } from "./item";
 export class WorkingItem implements Item {
   name: string;
 
-  imported = false;
+  imported: boolean = false;
 
-  exempt = false;
+  exempt: boolean = false;
 
   initPrice: number;
 

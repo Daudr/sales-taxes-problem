@@ -1,11 +1,11 @@
-import { TaxItem } from "./tax-item";
+import { NoTaxItem } from "./no-tax-item";
 import { Item } from "./item";
 import { Util } from "../utils/utils";
 
 /**
  * Class that represents an imported item with a 5% duty fee
  */
-export class ImportItem extends TaxItem {
+export class ImportItem extends NoTaxItem {
   /** The base item */
   item: Item;
 
